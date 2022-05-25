@@ -3,6 +3,7 @@
 <% @tasks.each do |task|%>
   <p><%= link_to task.title, task_path(task) %></p>
   <p><%= task.completed %></p>
+  <p><%= link_to "Delete", task_path(task), method: :delete %></p>
 <% end %>
 
 <%= link_to "Create a new task", new_task_path %>
