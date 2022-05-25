@@ -1,6 +1,6 @@
 <h1>My tasks</h1>
 
 <% @tasks.each do |task|%>
-  <p><%= task.title %></p>
+  <p><%= link_to task.title, task_path(task) %></p>
   <p><%= task.completed %></p>
 <% end %>
